@@ -10,10 +10,13 @@
 - [Nodemon](https://www.npmjs.com/package/nodemon)
 - [Babel](https://babeljs.io/)
   - babel-cli, babel-preset-env, babel-preset-stage-3 
-
-## Getting Started (React)
+  
+## Getting Started
 ```sh
 $ npm install
+```
+## Getting Started (React)
+```sh
 $ npm start
 ```
 ## Getting Started (GraphQL Server)
