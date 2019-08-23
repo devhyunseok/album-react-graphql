@@ -11,11 +11,12 @@
 - [Babel](https://babeljs.io/)
   - babel-cli, babel-preset-env, babel-preset-stage-3 
 
-## Getting Started
+## Getting Started (React)
 ```sh
 $ npm install
 $ npm start
 ```
+## Getting Started (GraphQL Server)
 ```sh
 $ npm server:start
 ```
