@@ -6,8 +6,8 @@
 - [Create-React-App](https://create-react-app.dev/)
 - [GraphQL-Yoga](https://github.com/prisma/graphql-yoga)
 - [Axios](https://github.com/axios/axios)
-- [nodemon](https://www.npmjs.com/package/nodemon)
-- [babel](https://babeljs.io/)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
+- [Babel](https://babeljs.io/)
   - babel-cli, babel-preset-env, babel-preset-stage-3 
 
 ## Getting Started
