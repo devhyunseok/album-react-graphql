@@ -1,10 +1,11 @@
-# graphql-yoga-crud
+# album-react-graphql
 - GraphQL-Yoga를 베이스로 기본 CRUD 구현.
 - React CRA를 이용하여 Client 화면 구현.
 
 ## Requirements
 - [Create-React-App](https://create-react-app.dev/)
 - [GraphQL-Yoga](https://github.com/prisma/graphql-yoga)
+- [React-Apollo](https://github.com/apollographql/react-apollo)
 - [Axios](https://github.com/axios/axios)
 - [Nodemon](https://www.npmjs.com/package/nodemon)
 - [Babel](https://babeljs.io/)
