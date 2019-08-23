@@ -1,7 +1,9 @@
 # graphql-yoga-crud
-GraphQL-Yoga를 베이스로 기본 CRUD 구현.
+- GraphQL-Yoga를 베이스로 기본 CRUD 구현.
+- React CRA를 이용하여 Client 화면 구현.
 
 ## Requirements
+- [Create-React-App](https://create-react-app.dev/)
 - [GraphQL-Yoga](https://github.com/prisma/graphql-yoga)
 - [Axios](https://github.com/axios/axios)
 - [nodemon](https://www.npmjs.com/package/nodemon)
@@ -12,6 +14,9 @@ GraphQL-Yoga를 베이스로 기본 CRUD 구현.
 ```sh
 $ npm install
 $ npm start
+```
+```sh
+$ npm server:start
 ```
 
 ## 참고 자료
