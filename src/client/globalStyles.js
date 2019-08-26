@@ -8,6 +8,7 @@ injectGlobal`
   body {
     font-family: 'Maven Pro', sans-serif;
     background-color: #ecf0f1;
+    margin: 0px;
   }
   
   a {
