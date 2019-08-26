@@ -12,7 +12,12 @@ type Album {
     title: String!
 }
 
+type AlbumThumbnail {
+    thumbnailUrl: String
+}
+
 type Query{
-    photos: [Photo]
+    photos(current: Int, limit: Int): [Photo]
     albums(current: Int, limit: Int): [Album]
+    albumThumbnail(albumId: Int): AlbumThumbnail
 }

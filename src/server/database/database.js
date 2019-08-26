@@ -19,6 +19,14 @@ export const getAlbums = async (current, limit = 10) => {
   return result.data;
 };
 
+export const getAlbumThumbnail = async (albumId) => {
+  const result = await axios(PHOTO_LIST_URL, {
+    params: { albumId: albumId }
+  });
+
+  return result.data[0]; // 대표 이미지로 첫번째 1개만 반환.
+};
+
 export const getPhotos = async (current, limit = 10) => {
   const result = await axios(PHOTO_LIST_URL, {
     params: {
