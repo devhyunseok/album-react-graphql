@@ -2,9 +2,9 @@ import { getPhotos, getAlbums, getAlbumThumbnail } from '../database/database';
 
 const resolvers = {
   Query: {
-    photos: () => getPhotos(),
+    photos: (context, { albumId, current, limit }) => getPhotos(albumId, current, limit),
     albums: (context, { current, limit }) => getAlbums(current, limit),
-    albumThumbnail: (ctx, { albumId } ) => getAlbumThumbnail(albumId),
+    albumThumbnail: (context, { albumId } ) => getAlbumThumbnail(albumId),
   }
 };
 
