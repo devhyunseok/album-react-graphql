@@ -17,7 +17,7 @@ type AlbumThumbnail {
 }
 
 type Query{
-    photos(current: Int, limit: Int): [Photo]
+    photos(albumId: Int, current: Int, limit: Int): [Photo]
     albums(current: Int, limit: Int): [Album]
     albumThumbnail(albumId: Int): AlbumThumbnail
 }

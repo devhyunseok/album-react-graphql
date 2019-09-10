@@ -27,9 +27,10 @@ export const getAlbumThumbnail = async (albumId) => {
   return result.data[0]; // 대표 이미지로 첫번째 1개만 반환.
 };
 
-export const getPhotos = async (current, limit = 10) => {
+export const getPhotos = async (albumId, current, limit = 10) => {
   const result = await axios(PHOTO_LIST_URL, {
     params: {
+      albumId: albumId,
       _start: calcStartPointByCurrent(current, limit), // 현재 페이지 입력 하면 페이지에 맞는 시작 위치를 반환.
       _limit: limit
     }

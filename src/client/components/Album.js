@@ -5,6 +5,38 @@ import PropTypes from 'prop-types';
 import { useQuery } from '@apollo/react-hooks';
 import { ALBUM_THUMBNAIL } from 'client/queries';
 
+const Album = (props) => {
+  const { title, albumId } = props;
+  const [thumbnail, setThumbnail] = useState(''); // thumbnail
+
+  const { loading, error, data } = useQuery(ALBUM_THUMBNAIL, {
+    variables: { albumId },
+  });
+
+  useEffect(() => {
+    if(!loading && !error) {
+      setThumbnail(data.albumThumbnail.thumbnailUrl);
+    }
+  }, [loading, error, data]);
+
+  return (
+    <Fragment>
+      <Link to={`/details/${albumId}`}>
+        <Card background={thumbnail}>
+          <Title>
+            {title}
+          </Title>
+        </Card>
+      </Link>
+    </Fragment>
+  );
+};
+
+Album.propTypes = {
+  albumId: PropTypes.number,
+  title: PropTypes.string
+};
+
 const Card = styled.div`
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -28,39 +60,5 @@ const Title = styled.span`
   right: 0;
   margin: auto;
 `;
-
-const Album = (props) => {
-  const { title, albumId } = props;
-  const [thumbnail, setThumbnail] = useState(''); // thumbnail
-
-  const { loading, error, data } = useQuery(ALBUM_THUMBNAIL, {
-    variables: { albumId },
-  });
-
-  useEffect(() => {
-    if(!loading && !error) {
-      console.log(data.albumThumbnail.thumbnailUrl);
-
-      setThumbnail(data.albumThumbnail.thumbnailUrl);
-    }
-  }, [loading, error, data]);
-
-  return (
-    <Fragment>
-      <Link to={`/details/${albumId}`}>
-        <Card background={thumbnail}>
-          <Title>
-            {title}
-          </Title>
-        </Card>
-      </Link>
-    </Fragment>
-  );
-};
-
-Album.propTypes = {
-  albumId: PropTypes.number,
-  title: PropTypes.string
-};
 
 export default Album;

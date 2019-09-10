@@ -11,10 +11,20 @@ export const ALBUM_LIST = gql`
 `;
 
 export const ALBUM_THUMBNAIL = gql`
-    {
-        albumThumbnail(albumId: 1) {
+    query albumThumbnail($albumId: Int!) {
+        albumThumbnail(albumId: $albumId) {
             thumbnailUrl
         }
     }
 `;
 
+export const PHOTO_LIST = gql`
+    query photos($albumId: Int!) {
+        photos(albumId: $albumId, current: 1, limit: 10) {
+            id
+            albumId
+            title
+            url
+        }
+    }
+`;
